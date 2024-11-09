@@ -21,9 +21,9 @@ printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbase
 rpm-ostree install codium
 
 # install extensions
-code --install-extension ms-vscode-remote.remote-containers
-code --install-extension ms-vscode-remote.remote-ssh
-code --install-extension ms-azuretools.vscode-docker
+codium --install-extension ms-vscode-remote.remote-containers
+codium --install-extension ms-vscode-remote.remote-ssh
+codium --install-extension ms-azuretools.vscode-docker
 
 #### Example for enabling a System Unit File
 
