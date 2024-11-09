@@ -6,6 +6,7 @@ RELEASE="$(rpm -E %fedora)"
 
 ### Apply permissions
 chmod 755 /usr/bin/personalize-config
+ln -s /usr/lib/systemd/user/personalize-config.service /usr/lib/systemd/user/default.target.wants/personalize-config.service
 
 ### Install packages
 
