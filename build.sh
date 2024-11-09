@@ -4,6 +4,8 @@ set -ouex pipefail
 
 RELEASE="$(rpm -E %fedora)"
 
+### Apply permissions
+chmod 755 /usr/bin/personalize-config
 
 ### Install packages
 
