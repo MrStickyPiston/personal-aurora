@@ -19,7 +19,6 @@ rm /usr/share/plymouth/themes/spinner/watermark.png
 ln -sf /usr/share/backgrounds/personalized-aurora/sticky_piston.png /usr/share/backgrounds/default.png
 ln -sf /usr/share/backgrounds/personalized-aurora/sticky_piston.png /usr/share/backgrounds/default-dark.png
 
-
 ### Install packages
 
 # Packages can be installed from any enabled yum repo on the image.

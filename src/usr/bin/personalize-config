@@ -1,2 +1,24 @@
 #!/bin/bash
+
+# Copy user config files to ~/.config
 cp -r /usr/lib/personalized-aurora/USERCONFIG/* ~/.config/
+
+# Load dconf settings
+dconf load / < /usr/lib/personalized-aurora/dconf.ini
+
+# Set wallpaper for each desktop
+dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
+var Desktops = desktops();                                                                                                                       
+for (i=0;i<Desktops.length;i++) {
+        d = Desktops[i];
+        d.wallpaperPlugin = "org.kde.image";
+        d.currentConfigGroup = Array("Wallpaper",
+                                    "org.kde.image",
+                                    "General");
+        d.writeConfig("Image", "file:///usr/share/backgrounds/default.png");
+        d.writeConfig("PreviewImage", "file:///usr/share/backgrounds/default.png");
+}'
+
+# Set lock screen wallpaper
+kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image "/usr/share/backgrounds/default.png"
+kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key PreviewImage "/usr/share/backgrounds/default.png"
