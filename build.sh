@@ -4,9 +4,21 @@ set -ouex pipefail
 
 RELEASE="$(rpm -E %fedora)"
 
-### Apply permissions
+### Customization service
+# Apply permissions
 chmod 755 /usr/bin/personalize-config
+
+# Install personalisation systemd service
 ln -s /usr/lib/systemd/user/personalize-config.service /usr/lib/systemd/user/default.target.wants/personalize-config.service
+
+### Personalization
+# Remove the boot splash 'aurora' watermark
+rm /usr/share/plymouth/themes/spinner/watermark.png
+
+# set the sddm greeter background
+ln -sf /usr/share/backgrounds/personalized-aurora/sticky_piston.png /usr/share/backgrounds/default.png
+ln -sf /usr/share/backgrounds/personalized-aurora/sticky_piston.png /usr/share/backgrounds/default-dark.png
+
 
 ### Install packages
 
