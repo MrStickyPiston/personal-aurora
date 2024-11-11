@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=personalize-config
+Terminal=false
+Icon=preferences-desktop-theme-global
+Categories=System;PersonalAurora;Utility;
+Name=Personalized Aurora Setup
+Comment=Personalize your desktop environment

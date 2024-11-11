@@ -9,6 +9,9 @@ cp -r /usr/lib/personalized-aurora/USERCONFIG/* ~/.config/
 # Load dconf settings
 dconf load / < /usr/lib/personalized-aurora/dconf.ini
 
+# Apply Plasma theme
+lookandfeeltool -a org.kde.breezedark.desktop --resetLayout
+
 # Set wallpaper for each desktop
 dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
 var Desktops = desktops();                                                                                                                       
@@ -25,9 +28,6 @@ for (i=0;i<Desktops.length;i++) {
 # Set lock screen wallpaper
 kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image "/usr/share/backgrounds/default.png"
 kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key PreviewImage "/usr/share/backgrounds/default.png"
-
-# Apply Plasma theme
-lookandfeeltool -a org.kde.breezedark.desktop --resetLayout
 
 # Notify user of script execution done
 notify-send "Personalized Aurora" "Personalized Aurora has been installed successfully."

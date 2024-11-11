@@ -10,8 +10,6 @@ RELEASE="$(rpm -E %fedora)"
 # Apply permissions
 chmod 755 /usr/bin/personalize-config
 
-# Install personalisation systemd service
-ln -s /usr/lib/systemd/user/personalize-config.service /usr/lib/systemd/user/default.target.wants/personalize-config.service
 
 ### End personalization service
 
@@ -22,6 +20,12 @@ rm /usr/share/plymouth/themes/spinner/watermark.png
 # set the sddm greeter background
 ln -sf /usr/share/backgrounds/personalized-aurora/sticky_piston.png /usr/share/backgrounds/default.png
 ln -sf /usr/share/backgrounds/personalized-aurora/sticky_piston.png /usr/share/backgrounds/default-dark.png
+
+sed -i 's|^background=.*|background=/usr/share/backgrounds/default.png|' /usr/share/sddm/themes/breeze/theme.conf
+
+
+# Set utilities-terminal icon instead of the ptyxis icon
+sed -i 's/Icon=org.gnome.Ptyxis/Icon=utilities-terminal/' /usr/share/applications/org.gnome.Ptyxis.desktop
 
 ### Update initramfs
 ## Required for the removed boot splash image to update
