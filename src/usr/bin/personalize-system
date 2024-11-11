@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Set sddm theme to breeze
+sudo kwriteconfig5 --file /etc/sddm.conf --group Theme --key Current breeze
+
+# Personalize flatpaks
+flatpak remove --system -y flathub org.mozilla.firefox
+flatpak install --system -y flathub io.gitlab.librewolf-community

@@ -9,7 +9,7 @@ RELEASE="$(rpm -E %fedora)"
 
 # Apply permissions
 chmod 755 /usr/bin/personalize-config
-
+chmod 755 /usr/bin/personalize-system
 
 ### End personalization service
 
