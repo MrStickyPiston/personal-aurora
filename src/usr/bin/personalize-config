@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Notify user of script execution
+notify-send "Personalized Aurora" "Applying personalized Aurora configuration, do not shut down your computer!"
+
 # Copy user config files to ~/.config
 cp -r /usr/lib/personalized-aurora/USERCONFIG/* ~/.config/
 
@@ -22,3 +25,9 @@ for (i=0;i<Desktops.length;i++) {
 # Set lock screen wallpaper
 kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image "/usr/share/backgrounds/default.png"
 kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key PreviewImage "/usr/share/backgrounds/default.png"
+
+# Apply Plasma theme
+lookandfeeltool -a org.kde.breezedark.desktop --resetLayout
+
+# Notify user of script execution done
+notify-send "Personalized Aurora" "Personalized Aurora has been installed successfully."
