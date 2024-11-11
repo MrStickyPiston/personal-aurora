@@ -28,6 +28,7 @@ sed -i 's|^background=.*|background=/usr/share/backgrounds/default.png|' /usr/sh
 sed -i 's/Icon=org.gnome.Ptyxis/Icon=utilities-terminal/' /usr/share/applications/org.gnome.Ptyxis.desktop
 
 # Link to the setup desktop in the skel desktop folder so that a new user will run it
+mkdir -p /etc/skel/Desktop
 ln -s /usr/share/applications/personalized-aurora-setup.desktop /etc/skel/Desktop/personalized-aurora-setup.desktop
 
 ### Update initramfs
