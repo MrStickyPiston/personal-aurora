@@ -13,6 +13,9 @@ dconf load / < /usr/lib/personalized-aurora/dconf.ini
 lookandfeeltool -a org.kde.breezedark.desktop --resetLayout
 sleep 1 # To make sure it does not reset the wallpaper
 
+# Apply Gnome gtk theme
+gsettings set org.gnome.desktop.interface gtk-theme Breeze
+
 # Set wallpaper for each desktop
 dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
 var Desktops = desktops();                                                                                                                       
@@ -32,6 +35,7 @@ kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group o
 
 # Disable sounds
 kwriteconfig5 --file kdeglobals --group Sounds --key Enable false
+kwriteconfig5 --file kdeglobals --group Sounds --key Theme oxygen
 
 # Notify user of script execution done
 notify-send "Personalized Aurora" "Personalized Aurora has been installed successfully."

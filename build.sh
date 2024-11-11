@@ -4,16 +4,12 @@ set -ouex pipefail
 
 RELEASE="$(rpm -E %fedora)"
 
-### Personalization service
-## Service that will automatcally apply the personalized configuration to the user one
-
-# Apply permissions
+# Apply script permissions
 chmod 755 /usr/bin/personalize-config
 chmod 755 /usr/bin/personalize-system
 
-### End personalization service
-
-### Personalization
+# Sound theme
+rpm-ostree install oxygen-sounds
 
 # set the sddm greeter background
 ln -sf /usr/share/backgrounds/personalized-aurora/sticky_piston.png /usr/share/backgrounds/default.png
@@ -28,5 +24,3 @@ sed -i 's/Icon=org.gnome.Ptyxis/Icon=utilities-terminal/' /usr/share/application
 # Link to the setup desktop in the skel desktop folder so that a new user will run it
 mkdir -p /etc/skel/Desktop
 ln -s /usr/share/applications/personalized-aurora-setup.desktop /etc/skel/Desktop/personalized-aurora-setup.desktop
-
-### End personalization

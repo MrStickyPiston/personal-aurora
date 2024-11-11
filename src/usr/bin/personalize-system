@@ -6,3 +6,4 @@ sudo kwriteconfig5 --file /etc/sddm.conf --group Theme --key Current breeze
 # Personalize flatpaks
 flatpak remove --system -y flathub org.mozilla.firefox
 flatpak install --system -y flathub io.gitlab.librewolf-community
+flatpak install --system -y org.gtk.Gtk3theme.Breeze
