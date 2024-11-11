@@ -29,5 +29,8 @@ for (i=0;i<Desktops.length;i++) {
 kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image "/usr/share/backgrounds/default.png"
 kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key PreviewImage "/usr/share/backgrounds/default.png"
 
+# Disable sounds
+kwriteconfig5 --file kdeglobals --group Sounds --key Enable false
+
 # Notify user of script execution done
 notify-send "Personalized Aurora" "Personalized Aurora has been installed successfully."

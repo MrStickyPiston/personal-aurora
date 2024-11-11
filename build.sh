@@ -27,6 +27,9 @@ sed -i 's|^background=.*|background=/usr/share/backgrounds/default.png|' /usr/sh
 # Set utilities-terminal icon instead of the ptyxis icon
 sed -i 's/Icon=org.gnome.Ptyxis/Icon=utilities-terminal/' /usr/share/applications/org.gnome.Ptyxis.desktop
 
+# Link to the setup desktop in the skel desktop folder so that a new user will run it
+ln -s /usr/share/applications/personalized-aurora-setup.desktop /etc/skel/Desktop/personalized-aurora-setup.desktop
+
 ### Update initramfs
 ## Required for the removed boot splash image to update
 ## code from https://github.com/ublue-os/bluefin/blob/f833e1f6a5d1863b26e6f24a5ec28068d511b3de/build_files/base/19-initramfs.sh
