@@ -48,7 +48,13 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
-# Copy the src to /
+## First make changes that requires initramfs rebuild to save bandwidth
+COPY boot/remove-logo.sh /tmp/remove-logo.sh
+
+RUN /tmp/remove-logo.sh && \
+    ostree container commit
+
+# Next make the other changes that change more often and don't require initramfs rebuild
 COPY src/ /
 
 COPY build.sh /tmp/build.sh
