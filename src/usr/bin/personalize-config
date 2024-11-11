@@ -11,6 +11,7 @@ dconf load / < /usr/lib/personalized-aurora/dconf.ini
 
 # Apply Plasma theme
 lookandfeeltool -a org.kde.breezedark.desktop --resetLayout
+sleep 1 # To make sure it does not reset the wallpaper
 
 # Set wallpaper for each desktop
 dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
