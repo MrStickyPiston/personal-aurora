@@ -36,6 +36,15 @@ jobs:
       - name: Maximize build space
         uses: ublue-os/remove-unwanted-software@v7
 
+      - name: Cache Buildah container storage
+        id: cache-buildah-storage
+        uses: actions/cache@v2
+        with:
+          path: ~/.local/share/containers/storage
+          key: buildah-storage-personal-aurora-${{ github.ref }}
+          restore-keys: |
+            buildah-storage-personal-aurora-${{ github.ref }}
+
       - name: Generate tags
         id: generate-tags
         shell: bash
