@@ -102,6 +102,7 @@ jobs:
           tags: |
             ${{ steps.generate-tags.outputs.alias_tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          layers: true
           oci: false
 
       # Workaround bug where capital letters in your GitHub username make it impossible to push to GHCR.
