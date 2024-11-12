@@ -16,19 +16,6 @@ sleep 1 # To make sure it does not reset the wallpaper
 # Apply Gnome gtk theme
 gsettings set org.gnome.desktop.interface gtk-theme Breeze
 
-# Set wallpaper for each desktop
-dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
-var Desktops = desktops();                                                                                                                       
-for (i=0;i<Desktops.length;i++) {
-        d = Desktops[i];
-        d.wallpaperPlugin = "org.kde.image";
-        d.currentConfigGroup = Array("Wallpaper",
-                                    "org.kde.image",
-                                    "General");
-        d.writeConfig("Image", "file:///usr/share/backgrounds/default.png");
-        d.writeConfig("PreviewImage", "file:///usr/share/backgrounds/default.png");
-}'
-
 # Set lock screen wallpaper
 kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image "/usr/share/backgrounds/default.png"
 kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key PreviewImage "/usr/share/backgrounds/default.png"

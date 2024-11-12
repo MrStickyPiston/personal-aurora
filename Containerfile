@@ -51,7 +51,8 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## First make changes that requires initramfs rebuild to save bandwidth
 COPY boot/remove-logo.sh /tmp/remove-logo.sh
 
-RUN /tmp/remove-logo.sh && \
+RUN mkdir -p /var/lib/alternatives && \
+    /tmp/remove-logo.sh && \
     ostree container commit
 
 # Next make the other changes that change more often and don't require initramfs rebuild
