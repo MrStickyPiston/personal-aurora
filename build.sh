@@ -19,7 +19,7 @@ sed -i 's|^background=.*|background=/usr/share/backgrounds/default.png|' /usr/sh
 
 # Set the default breeze lookandfeel wallpaper
 ln -sf /usr/share/backgrounds/personalized-aurora/sticky_piston.png /usr/share/wallpapers/sticky_piston.png
-kwriteconfig5 --file /usr/share/plasma/look-and-feel/org.kde.breezedark.desktop/contents/defaults --group Wallpaper --key Image sticky_piston.png
+kwriteconfig5 --file /usr/share/plasma/look-and-feel/org.kde.breezedark.desktop/contents/defaults --group Wallpaper --key Image sticky_piston
 
 # Replace ptyxis icon with utilities-terminal that fits better into plasma
 sed -i 's/Icon=org.gnome.Ptyxis/Icon=utilities-terminal/' /usr/share/applications/org.gnome.Ptyxis.desktop

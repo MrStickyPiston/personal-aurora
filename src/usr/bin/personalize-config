@@ -11,7 +11,6 @@ dconf load / < /usr/lib/personalized-aurora/dconf.ini
 
 # Apply Plasma theme
 lookandfeeltool -a org.kde.breezedark.desktop --resetLayout
-sleep 1 # To make sure it does not reset the wallpaper
 
 # Apply Gnome gtk theme
 gsettings set org.gnome.desktop.interface gtk-theme Breeze
