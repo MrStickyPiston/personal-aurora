@@ -11,15 +11,8 @@ chmod 755 /usr/bin/personalize-system
 # Sound theme
 rpm-ostree install oxygen-sounds
 
-# set the sddm greeter background
-ln -sf /usr/share/backgrounds/personalized-aurora/sticky_piston.png /usr/share/backgrounds/default.png
-ln -sf /usr/share/backgrounds/personalized-aurora/sticky_piston.png /usr/share/backgrounds/default-dark.png
-
+# SDDM background
 sed -i 's|^background=.*|background=/usr/share/backgrounds/default.png|' /usr/share/sddm/themes/breeze/theme.conf
 
 # Replace ptyxis icon with utilities-terminal that fits better into plasma
 sed -i 's/Icon=org.gnome.Ptyxis/Icon=utilities-terminal/' /usr/share/applications/org.gnome.Ptyxis.desktop
-
-# Link to the setup desktop in the skel desktop folder so that a new user will run it
-mkdir -p /etc/skel/Desktop
-ln -s /usr/share/applications/personalized-aurora-setup.desktop /etc/skel/Desktop/personalized-aurora-setup.desktop
