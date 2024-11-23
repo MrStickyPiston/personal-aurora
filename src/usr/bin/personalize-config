@@ -35,8 +35,5 @@ kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group o
 kwriteconfig5 --file kdeglobals --group Sounds --key Enable false
 kwriteconfig5 --file kdeglobals --group Sounds --key Theme oxygen
 
-# Remove desktop shortcut
-rm ~/Desktop/personalized-aurora-setup.desktop
-
 # Notify user of script execution done
 notify-send "Personalized Aurora" "Personalized Aurora has been installed successfully."

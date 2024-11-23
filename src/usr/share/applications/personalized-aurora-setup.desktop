@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Exec=personalize-config
+Exec=bash -c "personalize-config && rm ~/.config/autostart/personalized-aurora-setup.desktop"
 Terminal=false
 Icon=preferences-desktop-theme-global
 Categories=System;PersonalAurora;Utility;
