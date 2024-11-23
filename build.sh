@@ -16,3 +16,6 @@ sed -i 's|^background=.*|background=/usr/share/backgrounds/default.png|' /usr/sh
 
 # Replace ptyxis icon with utilities-terminal that fits better into plasma
 sed -i 's/Icon=org.gnome.Ptyxis/Icon=utilities-terminal/' /usr/share/applications/org.gnome.Ptyxis.desktop
+
+# Avatar (StickyPiston cropped to square)
+magick convert /usr/share/backgrounds/personalized-aurora/sticky_piston.png -crop 1500x1500+270+0 "/usr/share/plasma/avatars/Sticky Piston.png"
