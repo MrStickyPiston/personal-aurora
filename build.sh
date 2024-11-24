@@ -18,4 +18,7 @@ sed -i 's|^background=.*|background=/usr/share/backgrounds/default.png|' /usr/sh
 sed -i 's/Icon=org.gnome.Ptyxis/Icon=utilities-terminal/' /usr/share/applications/org.gnome.Ptyxis.desktop
 
 # Avatar (StickyPiston cropped to square)
-magick convert /usr/share/backgrounds/personalized-aurora/sticky_piston.png -crop 1500x1500+270+0 "/usr/share/plasma/avatars/Sticky Piston.png"
+magick /usr/share/backgrounds/personalized-aurora/sticky_piston.png -crop 1500x1500+270+0 "/usr/share/plasma/avatars/Sticky Piston.png"
+
+# Remove aurora fastfetch profile
+rm /etc/profile.d/aurora-fastfetch.sh

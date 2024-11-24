@@ -3,15 +3,11 @@
 # Notify user of script execution
 notify-send "Personalized Aurora" "Applying personalized Aurora configuration..."
 
-# Copy user config files to ~/.config
-cp -r /usr/lib/personalized-aurora/USERCONFIG/* ~/.config/
-
 # Load dconf settings
 dconf load / < /usr/lib/personalized-aurora/dconf.ini
 
 # Apply Plasma theme
 lookandfeeltool -a org.kde.breezedark.desktop --resetLayout
-sleep 1
 
 # Set wallpaper for each desktop
 plasma-apply-wallpaperimage /usr/share/wallpapers/StickyPiston
