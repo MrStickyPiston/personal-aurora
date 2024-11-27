@@ -1,9 +1,26 @@
 #!/bin/bash
 
+#### Appearance
 # Set sddm theme to breeze
 sudo kwriteconfig5 --file /etc/sddm.conf --group Theme --key Current breeze
 
-# Personalize flatpaks
-flatpak remove --system -y flathub org.mozilla.firefox
+#### Flatpaks
+## Install new flatpaks
+# Librewolf
 flatpak install --system -y flathub io.gitlab.librewolf-community
+
+# Breeze theme
 flatpak install --system -y org.gtk.Gtk3theme.Breeze
+
+## Remove default flatpaks
+# Mozilla
+flatpak remove --system -y flathub org.mozilla.firefox org.mozilla.firefox.Locale org.mozilla.Thunderbird 
+
+# Duplicate backup software
+flatpak remove --system -y org.gnome.DejaDup
+
+# Adwaita theme
+flatpak remove --system -y org.kde.KStyle.Adwaaita org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
+
+# Kde apps
+flatpak remove --system -y org.kde.kclock org.kde.kontact org.kde.kweather
