@@ -2,5 +2,6 @@
     "window.titleBarStyle": "custom",
     "editor.fontFamily": "'Cascadia Code', 'Droid Sans Mono', 'monospace', monospace",
     "telemetry.telemetryLevel": "off",
-    "code-runner.enableAppInsights": false
+    "code-runner.enableAppInsights": false,
+    "files.autoSave": "afterDelay"
 }

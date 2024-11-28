@@ -27,3 +27,6 @@ touch "${HOME}/.config/no-show-user-motd"
 
 # Notify user of script execution done
 notify-send "Personalized Aurora" "Personalized Aurora has been installed successfully."
+
+# Codium extensions
+code --install-extension ms-vscode-remote.remote-containers
