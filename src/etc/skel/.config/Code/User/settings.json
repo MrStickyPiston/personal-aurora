@@ -1,7 +1,16 @@
 {
+    // Remove adwaita themed "native" components
     "window.titleBarStyle": "custom",
+    "window.dialogStyle": "custom",
+
     "editor.fontFamily": "'Cascadia Code', 'Droid Sans Mono', 'monospace', monospace",
+
+    // Disable telemetry
     "telemetry.telemetryLevel": "off",
-    "code-runner.enableAppInsights": false,
-    "files.autoSave": "afterDelay"
+
+    // Personal preference
+    "files.autoSave": "afterDelay",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true
 }

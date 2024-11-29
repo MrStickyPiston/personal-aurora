@@ -9,6 +9,9 @@ sudo kwriteconfig5 --file /etc/sddm.conf --group Theme --key Current breeze
 # Librewolf
 flatpak install --system -y io.gitlab.librewolf-community
 
+# LibreOffice
+flatpak install --system -y org.libreoffice.LibreOffice
+
 # Breeze theme
 flatpak install --system -y org.gtk.Gtk3theme.Breeze
 
