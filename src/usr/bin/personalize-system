@@ -4,18 +4,32 @@
 # Set sddm theme to breeze
 sudo kwriteconfig5 --file /etc/sddm.conf --group Theme --key Current breeze
 
-#### Flatpaks
-## Install new flatpaks
+### Install new flatpaks
+## Office
 # Librewolf
 flatpak install --system -y io.gitlab.librewolf-community
 
 # LibreOffice
 flatpak install --system -y org.libreoffice.LibreOffice
 
+# OBS
+flatpak install --system -y com.obsproject.Studio
+
+## Social
+# Discord
+flatpak install --system -y com.discordapp.Discord
+
+# Element (Matrix)
+flatpak install --system -y im.riot.Riot
+
+# Prism Launcher
+flatpak install --system -y org.prismlauncher.PrismLauncher
+
+## System
 # Breeze theme
 flatpak install --system -y org.gtk.Gtk3theme.Breeze
 
-## Remove default flatpaks
+### Remove default flatpaks
 # Mozilla
 flatpak remove --system -y flathub org.mozilla.firefox org.mozilla.firefox.Locale org.mozilla.Thunderbird 
 
