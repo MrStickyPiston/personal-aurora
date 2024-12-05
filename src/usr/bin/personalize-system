@@ -37,7 +37,7 @@ flatpak remove --system -y flathub org.mozilla.firefox org.mozilla.firefox.Local
 flatpak remove --system -y org.gnome.DejaDup
 
 # Adwaita theme
-flatpak remove --system -y org.kde.KStyle.Adwaaita org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
+flatpak remove --system -y org.kde.KStyle.Adwaita org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
 
 # Kde apps
 flatpak remove --system -y org.kde.kclock org.kde.kontact org.kde.kweather
