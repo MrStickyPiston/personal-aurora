@@ -13,6 +13,7 @@ Ublue OS Aurora tweaked for my personal usage.
         - Discord
         - Element
         - Prismlauncher
+        
     - Removed:
         - Firefox
         - Thunderbird
@@ -33,6 +34,7 @@ Ublue OS Aurora tweaked for my personal usage.
         - SDDM
 
     - Fastfetch logo: fedora
+    - Grub boot splash: spinner
 
     - Visual studio code:
         - Dialog style: custom (blends better with the vscode window)
