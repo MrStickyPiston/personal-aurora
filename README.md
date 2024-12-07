@@ -33,6 +33,9 @@ Ublue OS Aurora tweaked for my personal usage.
         - Lock screen
         - SDDM
 
+    - Profile pictures
+        - Sticky Piston
+
     - Fastfetch logo: fedora
     - Grub boot splash: spinner
 
