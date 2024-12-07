@@ -1,5 +1,6 @@
 # Personal Aurora
-Ublue OS Aurora tweaked for my personal usage.
+![Personal Aurora screenshot desktop fastfetch](images/screenshot_desktop_fastfetch.png)
+A tweaked version pf Ublue Aurora with personalized default settings, wallpapers, themes and more.
 
 ## Features
 - All features of `aurora-stable-dx-nvidia`
