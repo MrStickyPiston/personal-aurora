@@ -49,9 +49,10 @@ A tweaked version pf Ublue Aurora with personalized default settings, wallpapers
         - Auto fetch git: on
 
     - Ptyxis
-        - icon: utilities-terminal
+        - Icon: utilities-terminal
         - Audible bell: off
         - Visual bell: off
+        - Motd: off
 
 - rpm-ostree packages
     - Added:
