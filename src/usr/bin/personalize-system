@@ -31,7 +31,7 @@ flatpak install --system -y org.gtk.Gtk3theme.Breeze
 
 ### Remove default flatpaks
 # Mozilla
-flatpak remove --system -y flathub org.mozilla.firefox org.mozilla.firefox.Locale org.mozilla.Thunderbird 
+flatpak remove --system -y org.mozilla.firefox org.mozilla.firefox.Locale org.mozilla.Thunderbird 
 
 # Duplicate backup software
 flatpak remove --system -y org.gnome.DejaDup
